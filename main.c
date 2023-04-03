@@ -1,6 +1,5 @@
 #include "ordenacao.h"
-#include "quickSortExterno.h"
-#include "est.h"
+
 int main(int argc,char *argv[]) {
     clock_t start, end;
     double elapsed;
@@ -125,23 +124,7 @@ int main(int argc,char *argv[]) {
         
         break;
     }
-    case 3:
-    {
-            FILE *arqLi,*arqEi, *arqLEs;
-            ests *estatistica = malloc(sizeof(ests));
-            arqLi = fopen("PROVAO2.bin", "r+b");
-            arqEi = fopen("PROVAO2.bin", "r+b");
-            arqLEs = fopen("PROVAO2.bin", "r+b");
-
-            iniciaTimeExecucao(estatistica);
-            QuickSortExterno(&arqLi, &arqEi, &arqLEs, 1, qtd, estatistica);
-            encerraTimeExecucao(estatistica);
-            mostrarEstatistica(estatistica);
-            //fclose(arqEi);
-            //fclose(arqLEs);
-            rewind(f);
-            break;
-    }
+    
 }
     
 
